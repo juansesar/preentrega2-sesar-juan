@@ -1,0 +1,19 @@
+/* goles */
+
+.videosCaja {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    align-items: center;
+    iframe {
+        width: 100%;
+        padding-top: 2%;
+    }
+    
+    video {
+        width: 100%;
+    
+    }
+}
+
+
