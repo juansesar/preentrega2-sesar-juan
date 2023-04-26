@@ -34,21 +34,17 @@ main {
   background-color: rgb(14, 143, 160);
   padding: 2% 0 2% 0;
 }
-.main__section p {
-  font-size: 10px;
-}
-.main__section img {
-  display: flex;
-  margin-top: 10%;
-}
 .main__section .main__section-fotos {
   display: flex;
   flex-direction: column;
   padding: 5%;
 }
-.main__section .main__section-fotos-f1 {
+.main__section .main__section-media {
   display: flex;
-  position: static;
+  flex-direction: column;
+}
+.main__section .main__section-media img {
+  display: flex;
   width: 100%;
   margin-top: 5%;
 }
@@ -56,6 +52,40 @@ main {
 @media (min-width: 570px) {
   .main__section p {
     font-size: 15px;
+  }
+  .main__section .main__section-media {
+    display: flex;
+    flex-direction: column;
+  }
+  .main__section .main__section-media img {
+    display: flex;
+    width: 100%;
+    margin-top: 5%;
+  }
+}
+@media (min-width: 1000px) {
+  .main__section {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    transition: 1s;
+  }
+  .main__section p {
+    font-size: 15px;
+  }
+  .main__section .main__section-media {
+    display: flex;
+    flex-direction: row;
+    align-content: start;
+  }
+  .main__section .main__section-media img {
+    display: flex;
+    width: 40%;
+    height: 40%;
+    margin: 0% 0% 0% 2%;
+  }
+  .main__section .main__section-fotos {
+    padding: 0%;
   }
 }
 /* header   */
@@ -130,6 +160,7 @@ main {
 }
 .header__contenedor .header__nav {
   display: flex;
+  width: 100%;
 }
 .header__contenedor .show-nav,
 .header__contenedor .hiden-nav {
@@ -176,16 +207,11 @@ main {
   display: flex;
   flex-direction: column;
   align-content: end;
-  width: 100%;
+  width: 96%;
+  padding: 2%;
 }
-.footer a {
-  outline: none;
-  text-decoration: none;
-  font-size: small;
-  color: white;
-}
-.footer a:hover {
-  color: rgb(14, 143, 160);
+.footer h3 {
+  text-align: center;
 }
 .footer ul {
   list-style: none;
@@ -196,13 +222,19 @@ main {
   width: 100%;
   text-transform: uppercase;
 }
-.footer h3 {
-  text-align: center;
-}
 .footer ul li {
   padding: 2%;
 }
-.footer .linea {
+.footer ul li a {
+  outline: none;
+  text-decoration: none;
+  font-size: small;
+  color: white;
+}
+.footer ul li a:hover {
+  color: rgb(14, 143, 160);
+}
+.footer ul .linea {
   margin-top: 2%;
 }
 
