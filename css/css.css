@@ -71,7 +71,7 @@ main {
     transition: 1s;
   }
   .main__section p {
-    font-size: 15px;
+    font-size: 1.5vw;
   }
   .main__section .main__section-media {
     display: flex;
