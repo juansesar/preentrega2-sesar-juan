@@ -93,6 +93,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   background-color: rgb(66, 65, 65);
+  background-image: linear-gradient(rgb(80, 79, 79) 0% 70%, rgb(37, 37, 37));
   align-items: center;
   justify-items: start;
   padding: 3% 0 3% 0;
@@ -142,33 +143,14 @@ main {
   font: bolder;
   color: white;
 }
-.header__contenedor .show-nav,
-.header__contenedor .hide-nav {
-  cursor: pointer;
-  transition: 0.4s;
-}
-.header__contenedor .show-nav {
-  order: 1;
-}
-.header__contenedor .header__nav a:hover,
-.header__contenedor .show-nav:hover,
-.header__contenedor .hide-nav:hover {
-  color: rgb(10, 172, 194);
-}
-.header__contenedor #check {
-  display: none;
+.header__contenedor ul li a:hover {
+  color: rgb(7, 248, 208);
+  background-image: linear-gradient(to right, rgba(10, 173, 194, 0.322) 0% 70%, rgba(37, 37, 37, 0));
+  transition: 1.8s;
 }
 .header__contenedor .header__nav {
   display: flex;
   width: 100%;
-}
-.header__contenedor .show-nav,
-.header__contenedor .hiden-nav {
-  display: block;
-  color: white;
-  font-size: 5vw;
-}
-.header__contenedor .header__nav {
   background-color: black;
   position: fixed;
   width: 100%;
@@ -180,16 +162,34 @@ main {
   z-index: 100;
   transition: 0;
 }
+.header__contenedor .header__nav .show-nav {
+  order: 1;
+  display: block;
+  color: white;
+  font-size: 5vw;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.header__contenedor .header__nav .hiden-nav {
+  display: block;
+  color: white;
+  font-size: 5vw;
+  cursor: pointer;
+  transition: 0.4s;
+}
 .header__contenedor .header__nav a {
   display: block;
   padding: 10px;
   font-size: 15px;
 }
-.header__contenedor .hide-nav {
+.header__contenedor .header__nav .hide-nav {
   position: absolute;
   top: 40px;
   right: 40px;
   color: white;
+}
+.header__contenedor #check {
+  display: none;
 }
 .header__contenedor #check:checked ~ .header__nav {
   right: 0;
@@ -201,6 +201,7 @@ main {
 /* footer */
 .footer {
   background-color: rgb(66, 66, 66);
+  background-image: linear-gradient(to top, rgb(80, 79, 79), rgb(37, 37, 37));
   margin-top: 5%;
   font-size: small;
   font-weight: 300;
@@ -232,7 +233,9 @@ main {
   color: white;
 }
 .footer ul li a:hover {
-  color: rgb(14, 143, 160);
+  color: rgb(7, 248, 216);
+  background-image: linear-gradient(to right, rgba(10, 173, 194, 0.568) 0% 70%, rgba(37, 37, 37, 0));
+  transition: 3s;
 }
 .footer ul .linea {
   margin-top: 2%;

@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     background-color: rgb(66, 65, 65);
+    background-image: linear-gradient( rgb(80, 79, 79) 0% 70%, rgb(37, 37, 37));
     align-items: center;
     justify-items: start;
     padding: 3% 0 3% 0;
@@ -57,47 +58,22 @@
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 font: bolder;
                 color: white;
+                &:hover{
+                    color: rgb(7, 248, 208);
+                    background-image: linear-gradient(to right, rgba(10, 173, 194, 0.322) 0% 70%, rgba(37, 37, 37, 0));
+                    transition: 1.8s;
+                }
             }
         }
 
     }
-    .show-nav,
-    .hide-nav {
-        cursor: pointer;
-        transition: 0.4s;
+  
 
-
-    }
-
-    .show-nav {
-        order: 1;
-    }
-
-    .header__nav a:hover,
-    .show-nav:hover,
-    .hide-nav:hover {
-        color: rgb(10, 172, 194);
-    }
-
-    #check {
-        display: none;
-
-    }
+    
 
     .header__nav {
         display: flex;
         width: 100%;
-    }
-
-    .show-nav,
-    .hiden-nav {
-        display: block;
-        color: white;
-        font-size: 5vw;
-
-    }
-
-    .header__nav {
         background-color: black;
         position: fixed;
         width: 100%;
@@ -108,20 +84,46 @@
         padding: 10px 0px;
         z-index: 100;
         transition: 0;
+        .show-nav {
+            order: 1;
+            display: block;
+            color: white;
+            font-size: 5vw;
+            cursor: pointer;
+            transition: 0.4s;
+            
+        }
+        
+        .hiden-nav {
+            display: block;
+            color: white;
+            font-size: 5vw;
+            cursor: pointer;
+            transition: 0.4s;
+            
+        }
+        
+        a {
+            display: block;
+            padding: 10px;
+            font-size: 15px;
+    
+        }
+    
+        .hide-nav {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            color: white;
+        }
     }
 
-    .header__nav a {
-        display: block;
-        padding: 10px;
-        font-size: 15px;
+    
 
-    }
+   
 
-    .hide-nav {
-        position: absolute;
-        top: 40px;
-        right: 40px;
-        color: white;
+    #check {
+        display: none;
     }
 
     #check:checked~.header__nav {
@@ -138,6 +140,7 @@
 
 .footer {
     background-color: rgb(66, 66, 66);
+    background-image: linear-gradient( to top, rgb(80, 79, 79) , rgb(37, 37, 37));
     margin-top: 5%;
     font-size: small;
     font-weight: 300;
@@ -165,7 +168,9 @@
                 font-size: small;
                 color: white;
                 &:hover{
-                    color: rgb(14, 143, 160);
+                    color: rgb(7, 248, 216);
+                    background-image: linear-gradient(to right, rgba(10, 173, 194, 0.568) 0% 70%, rgba(37, 37, 37, 0));
+                    transition: 3s;
                 }
             }
         }
