@@ -296,6 +296,7 @@ main {
   width: 100%;
   height: 100%;
   padding-bottom: 5%;
+  margin-top: 5%;
 }
 
 @media (min-width: 570px) {
@@ -316,6 +317,7 @@ main {
     width: 95%;
     height: 100%;
     justify-self: center;
+    margin-top: 5%;
   }
 }
 @media (min-width: 570px) {
@@ -363,13 +365,13 @@ main {
   flex-direction: column;
   align-content: center;
   justify-content: space-between;
-  margin: 5% 0% 5% 0%;
 }
 .main_section-frases-img img {
   display: flex;
   align-self: center;
   width: 100%;
   justify-content: center;
+  margin-top: 5%;
 }
 
 @media (min-width: 570px) {
