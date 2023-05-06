@@ -229,7 +229,7 @@ main {
 .footer ul li a {
   outline: none;
   text-decoration: none;
-  font-size: small;
+  font-size: 80%;
   color: white;
 }
 .footer ul li a:hover {
@@ -237,8 +237,26 @@ main {
   background-image: linear-gradient(to right, rgba(10, 173, 194, 0.568) 0% 70%, rgba(37, 37, 37, 0));
   transition: 3s;
 }
-.footer ul .linea {
+.footer .footer__form {
+  text-align: center;
+}
+.footer .footer__form form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 5%;
+}
+.footer .footer__form form h3,
+.footer .footer__form form h4 {
+  text-align: left;
   margin-top: 2%;
+}
+.footer .footer__form form .footer__form-buton {
+  width: 20%;
+  background-color: rgb(14, 143, 160);
+  color: white;
+  margin-top: 2%;
+  align-self: end;
 }
 
 @media (min-width: 570px) {
@@ -274,7 +292,7 @@ main {
   }
   .header__contenedor .header__nav ul a {
     display: flex;
-    font-size: 1.7vw;
+    font-size: 70%;
     padding: 0%;
     align-self: center;
     justify-self: center;
@@ -283,6 +301,39 @@ main {
   .header__contenedor .show-nav,
   .header__contenedor .hide-nav {
     display: none;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .footer ul,
+  .footer li {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+  .footer .footer__contacts {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+  }
+  .footer .footer__contacts .footer__contacts-redes,
+  .footer .footer__contacts .footer__nav {
+    padding: 5%;
+  }
+  .footer .footer__form {
+    margin-right: 5%;
+  }
+  .footer .footer__form form {
+    width: 100%;
+    margin: 0;
+    align-self: auto;
+  }
+  .footer h3, .footer h4 {
+    font-size: 100%;
+  }
+  .footer a {
+    font-size: 70%;
   }
 }
 /* biografia */
