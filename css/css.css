@@ -201,7 +201,7 @@ main {
 .footer {
   background-color: rgb(66, 66, 66);
   background-image: linear-gradient(to top, rgb(80, 79, 79), rgb(37, 37, 37));
-  margin-top: 5%;
+  margin-top: 0%;
   font-size: small;
   font-weight: 300;
   display: flex;
@@ -420,7 +420,31 @@ main {
   align-self: center;
   width: 100%;
   justify-content: center;
-  margin-top: 5%;
+  margin-top: 3%;
+}
+
+.main__section-frases-encuesta {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(10, 172, 194);
+  margin: 3% 0% 0% 0%;
+}
+.main__section-frases-encuesta span {
+  font-size: 0, 7rem;
+  font: bold;
+}
+.main__section-frases-encuesta span,
+.main__section-frases-encuesta input {
+  padding: 1%;
+  color: white;
+}
+.main__section-frases-encuesta .inputs__frases-encuesta-button {
+  padding: 1%;
+  margin: 2%;
+  width: 10%;
+  align-self: center;
+  background-color: rgb(37, 37, 37);
 }
 
 @media (min-width: 570px) {
