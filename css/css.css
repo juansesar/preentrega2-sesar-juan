@@ -28,22 +28,40 @@ main {
   transition: 1s;
 }
 .main__section h2 {
-  margin: 5% 0 5% 0;
+  margin: 2% 0 2% 0;
   text-align: center;
   font-size: 1rem;
   background-color: rgb(14, 143, 160);
   padding: 2% 0 2% 0;
 }
-.main__section .main__section-fotos {
+.main__section .main__section-frase .frase__pele {
+  display: flex;
+  flex-direction: row;
+  font-size: 2rem;
+  margin-top: 2%;
+  text-align: center;
+}
+.main__section .main__section-frase .lapelotanosemancha {
+  display: none;
+}
+.main__section .main__section-frase .peledebutoconunpibe {
+  display: flex;
+  width: 100%;
+  align-self: center;
+  margin-top: 2%;
+}
+
+.main__section-fotos {
   display: flex;
   flex-direction: column;
   padding: 5%;
 }
-.main__section .main__section-media {
+
+.main__section-media {
   display: flex;
   flex-direction: column;
 }
-.main__section .main__section-media img {
+.main__section-media img {
   display: flex;
   width: 100%;
   margin-top: 5%;
@@ -51,7 +69,7 @@ main {
 
 @media (min-width: 570px) {
   .main__section p {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   .main__section .main__section-media {
     display: flex;
@@ -62,6 +80,29 @@ main {
     width: 100%;
     margin-top: 5%;
   }
+  .main__section .main__section-frase {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+  }
+  .main__section .main__section-frase .frase__pele {
+    font-size: 1.5rem;
+    margin: 2%;
+    text-align: center;
+    margin-top: 10%;
+  }
+  .main__section .main__section-frase .peledebutoconunpibe {
+    display: flex;
+    width: 37%;
+    align-self: center;
+    margin-top: 2%;
+  }
+  .main__section .main__section-frase .lapelotanosemancha {
+    display: flex;
+    width: 34%;
+    align-self: center;
+    margin-top: 2%;
+  }
 }
 @media (min-width: 1000px) {
   .main__section {
@@ -71,7 +112,19 @@ main {
     transition: 1s;
   }
   .main__section p {
-    font-size: 0.8rem;
+    font-size: 1rem;
+  }
+  .main__section .main__section-frase .frase__pele {
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 10%;
+  }
+  .main__section .main__section-frase .pele__pibe-img {
+    display: flex;
+    width: 79%;
+    align-self: center;
   }
   .main__section .main__section-media {
     display: flex;
@@ -80,7 +133,8 @@ main {
   }
   .main__section .main__section-media img {
     display: flex;
-    width: 20%;
+    width: 40%;
+    height: 30%;
     margin: 0% 0% 0% 2%;
   }
   .main__section .main__section-fotos {
@@ -420,31 +474,54 @@ main {
   align-self: center;
   width: 100%;
   justify-content: center;
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
-.main__section-frases-encuesta {
+.main__section-caja-encuesta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.main__section-caja-encuesta .main__section-frases-encuesta {
   display: flex;
   flex-direction: column;
   text-align: center;
   background-color: rgb(10, 172, 194);
   margin: 3% 0% 0% 0%;
+  width: 100%;
 }
-.main__section-frases-encuesta span {
+.main__section-caja-encuesta .main__section-frases-encuesta span {
   font-size: 0, 7rem;
   font: bold;
 }
-.main__section-frases-encuesta span,
-.main__section-frases-encuesta input {
+.main__section-caja-encuesta .main__section-frases-encuesta span,
+.main__section-caja-encuesta .main__section-frases-encuesta input {
   padding: 1%;
   color: white;
 }
-.main__section-frases-encuesta .inputs__frases-encuesta-button {
+.main__section-caja-encuesta .main__section-frases-encuesta .inputs__frases-encuesta-button {
   padding: 1%;
   margin: 2%;
-  width: 10%;
+  width: 20%;
   align-self: center;
   background-color: rgb(37, 37, 37);
+}
+.main__section-caja-encuesta .main__section-frases-encuesta .section__frases-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.main__section-caja-encuesta .main__section-frases-encuesta .inputs__group1,
+.main__section-caja-encuesta .main__section-frases-encuesta .inputs__group2 {
+  display: flex;
+  flex-direction: column;
+}
+.main__section-caja-encuesta .inputs__frases-encuesta-apurate {
+  display: flex;
+  margin: 3%;
+  text-align: center;
+  font-size: 1.4rem;
+  background-color: rgb(37, 37, 37);
+  border-color: rgb(10, 172, 194);
 }
 
 @media (min-width: 570px) {
@@ -454,12 +531,26 @@ main {
     grid-template-columns: 1fr 1fr;
     align-content: center;
     justify-content: space-between;
-    margin: 5% 0% 5% 0%;
+    margin: 2% 0% 2% 0%;
   }
   .main_section-frases-img img {
     display: flex;
     width: 97.5%;
     justify-self: center;
+  }
+  .main__section-caja-encuesta .inputs__frases-encuesta-button {
+    width: 10%;
+  }
+  .main__section-caja-encuesta .inputs__frases-encuesta-apurate {
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 1000px) {
+  .main__section-caja-encuesta .inputs__frases-encuesta-button {
+    width: 10%;
+  }
+  .main__section-caja-encuesta .inputs__frases-encuesta-apurate {
+    font-size: 2.8rem;
   }
 }
 

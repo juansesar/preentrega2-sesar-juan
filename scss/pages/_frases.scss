@@ -11,51 +11,103 @@
          align-self: center;
          width: 100%;
          justify-content: center;
-         margin-top: 3%;
+         margin-top: 2%;
 
 
      }
  }
- .main__section-frases-encuesta{
-    display: flex;
-    flex-direction: column;
-    text-align: center ;
-    background-color: $secundary-color;
-    margin: 3% 0% 0% 0% ;
-    
-    span{
-        font-size: 0,7rem;
-        font: bold;
-    }
-    span,
-    input{
-        padding: 1%;
-        color: $primary-color;
-    }
-    .inputs__frases-encuesta-button{
-        padding: 1%;
-        margin: 2%;
-        width: 10%;
-        align-self: center;
-        background-color: $back-color;
-    }
+
+ .main__section-caja-encuesta {
+     display: grid;
+     grid-template-columns: 2fr 1fr;
+
+     .main__section-frases-encuesta {
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+         background-color: $secundary-color;
+         margin: 3% 0% 0% 0%;
+         width: 100%;
+
+         span {
+             font-size: 0, 7rem;
+             font: bold;
+         }
+
+         span,
+         input {
+             padding: 1%;
+             color: $primary-color;
+         }
+
+         .inputs__frases-encuesta-button {
+             padding: 1%;
+             margin: 2%;
+             width: 20%;
+             align-self: center;
+             background-color: $back-color;
+         }
+
+         .section__frases-inputs {
+             display: flex;
+             flex-direction: row;
+             justify-content: space-around;
+         }
+
+         .inputs__group1,
+         .inputs__group2 {
+             display: flex;
+             flex-direction: column;
+         }
+
+
+     }
+
+     .inputs__frases-encuesta-apurate {
+         display: flex;
+         margin: 3%;
+         text-align: center;
+         font-size: 1.4rem;
+         background-color: $back-color;
+         border-color: $secundary-color;
+     }
  }
 
  @media (min-width: 570px) {
      /* frases */
-    
-    .main_section-frases-img {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-content: center;
-        justify-content: space-between;
-        margin: 5% 0% 5% 0%;
 
-        img {
-            display: flex;
-            width: 97.5%;
-            justify-self: center;
-        }
+     .main_section-frases-img {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         align-content: center;
+         justify-content: space-between;
+         margin: 2% 0% 2% 0%;
+
+         img {
+             display: flex;
+             width: 97.5%;
+             justify-self: center;
+         }
      }
 
+     .main__section-caja-encuesta {
+         .inputs__frases-encuesta-button {
+             width: 10%;
+         }
+
+         .inputs__frases-encuesta-apurate {
+             font-size: 2.3rem;
+         }
+     }
  }
+ @media (min-width: 1000px) {
+    .main__section-caja-encuesta {
+        .inputs__frases-encuesta-button {
+            width: 10%;
+        }
+
+        .inputs__frases-encuesta-apurate {
+            font-size: 2.8rem;
+        }
+    }
+}
