@@ -199,7 +199,7 @@
             h4 {
                 text-align: left;
                 margin-top: 2%;
-                
+
             }
 
             .footer__form-buton {
@@ -212,6 +212,7 @@
         }
     }
 }
+
 @media (min-width: 570px) {
 
     .header__contenedor {
@@ -237,7 +238,7 @@
             align-items: center;
             justify-self: center;
             margin: 200%;
-                
+
             ul {
                 margin: 0;
                 padding: 0;
@@ -260,44 +261,89 @@
             display: none;
         }
     }
-    .footer{
+
+    .footer {
         display: grid;
         grid-template-columns: 1fr 2fr;
+
         ul,
-        li{
+        li {
             display: flex;
             flex-direction: column;
             text-align: start;
         }
-        
-        .footer__contacts{
+
+        .footer__contacts {
             display: flex;
             flex-direction: row;
             margin-left: 5%;
+
             .footer__contacts-redes,
-            .footer__nav{
+            .footer__nav {
                 padding: 5%;
 
             }
-            
+
         }
-        .footer__form{
+
+        .footer__form {
             margin-right: 5%;
-            
+
             form {
                 width: 100%;
                 margin: 0;
-                align-self: auto;   
+                align-self: auto;
             }
         }
-        h3, h4{
+
+        h3,
+        h4 {
             font-size: 100%;
         }
-        a{
+
+        a {
             font-size: 70%;
         }
     }
-    
-    
+
+
 }
-    
+
+@media(min-width: 1000px) {
+    .header__contenedor {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 1fr 20%;
+
+        .header__h1 {
+            justify-self: left;
+
+        }
+
+        img {
+            display: flex;
+            width: 55%;
+            justify-self: end;
+            grid-row: span 2;
+
+        }
+
+        .header__nav {
+            padding: 0;
+            justify-self: start;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+            }
+
+            li {
+                padding: 0;
+                margin-left: 2%;
+                padding-right: 10%;
+            }
+        }
+    }
+
+
+}

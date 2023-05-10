@@ -395,11 +395,41 @@ main {
     margin: 0;
     align-self: auto;
   }
-  .footer h3, .footer h4 {
+  .footer h3,
+  .footer h4 {
     font-size: 100%;
   }
   .footer a {
     font-size: 70%;
+  }
+}
+@media (min-width: 1000px) {
+  .header__contenedor {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr 20%;
+  }
+  .header__contenedor .header__h1 {
+    justify-self: left;
+  }
+  .header__contenedor img {
+    display: flex;
+    width: 55%;
+    justify-self: end;
+    grid-row: span 2;
+  }
+  .header__contenedor .header__nav {
+    padding: 0;
+    justify-self: start;
+  }
+  .header__contenedor .header__nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .header__contenedor .header__nav li {
+    padding: 0;
+    margin-left: 2%;
+    padding-right: 10%;
   }
 }
 /* biografia */
