@@ -18,8 +18,7 @@
  }
 
  .main__section-caja-encuesta {
-     display: grid;
-     grid-template-columns: 2fr 1fr;
+    
 
      .main__section-frases-encuesta {
          display: flex;
@@ -102,6 +101,8 @@
  }
  @media (min-width: 1000px) {
     .main__section-caja-encuesta {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
         .inputs__frases-encuesta-button {
             width: 10%;
         }
