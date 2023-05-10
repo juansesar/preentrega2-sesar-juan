@@ -58,7 +58,7 @@ main {
 }
 
 .main__section-media {
-  display: flex;
+  display: grid;
   flex-direction: column;
 }
 .main__section-media img {
@@ -111,31 +111,44 @@ main {
     font-size: 10px;
     transition: 1s;
   }
-  .main__section p {
-    font-size: 1rem;
+  .main__section .main__section-frase {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 2%;
+    align-items: center;
   }
   .main__section .main__section-frase .frase__pele {
     display: flex;
     flex-direction: row;
     font-size: 2rem;
     text-align: center;
-    margin-top: 10%;
   }
-  .main__section .main__section-frase .pele__pibe-img {
-    display: flex;
-    width: 79%;
-    align-self: center;
+  .main__section .main__section-frase .peledebutoconunpibe {
+    width: 100%;
+    height: 100%;
+    align-self: flex-end;
+    object-fit: cover;
+  }
+  .main__section .main__section-frase .lapelotanosemancha {
+    width: 100%;
+    height: 100%;
+    align-self: flex-start;
+    object-fit: cover;
   }
   .main__section .main__section-media {
-    display: flex;
-    flex-direction: row;
-    align-content: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .main__section .main__section-media p {
+    font-size: 1rem;
+    width: 80%;
+    grid-column: span 2;
   }
   .main__section .main__section-media img {
-    display: flex;
-    width: 40%;
-    height: 30%;
-    margin: 0% 0% 0% 2%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0%;
   }
   .main__section .main__section-fotos {
     padding: 0%;
